@@ -165,7 +165,7 @@ class DataFileDescriptor(object):
 
             fields.append({'term': field_tag.get('term'), 'index': index, 'default': default})
 
-        file_encoding = section_tag.get('encoding')
+        file_encoding = section_tag.get('encoding') or 'utf-8'
 
         lines_terminated_by = _decode_xml_attribute(raw_element=section_tag,
                                                     attribute_name='linesTerminatedBy',
